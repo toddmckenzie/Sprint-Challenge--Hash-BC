@@ -50,6 +50,7 @@ def hash_table_insert(hash_table, key, value):
         new_pair.next = hash_table.storage[index]
         hash_table.storage[index] = new_pair
 
+ 
 
 # '''
 # Fill this in.
@@ -75,6 +76,8 @@ def hash_table_remove(hash_table, key):
             last_pair.next = current_pair.next
 
 
+
+
 # '''
 # Fill this in.
 
@@ -90,7 +93,7 @@ def hash_table_retrieve(hash_table, key):
             return current_pair.value
         current_pair = current_pair.next
 
-
+    return None
 # '''
 # Fill this in
 # '''
