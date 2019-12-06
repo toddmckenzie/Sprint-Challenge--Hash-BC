@@ -18,6 +18,8 @@ def get_indices_of_item_weights(weights, length, limit):
     # value is stored with the index of weights position
 
     for i in weights:
+        if limit - i == i:
+            return (1,0)
         if hash_table_retrieve(ht, limit - i):
             x = hash_table_retrieve(ht, i)
             y = hash_table_retrieve(ht, limit-i)
