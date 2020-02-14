@@ -49,13 +49,16 @@ def hash_table_insert(hash_table, key, value):
         new_pair = LinkedPair(key, value)
         new_pair.next = hash_table.storage[index]
         hash_table.storage[index] = new_pair
+    
+    # return index
 
+ 
 
 # '''
 # Fill this in.
-
 # If you try to remove a value that isn't there, print a warning.
 # '''
+
 def hash_table_remove(hash_table, key):
     index = hash(key, len(hash_table.storage))
 
@@ -75,6 +78,8 @@ def hash_table_remove(hash_table, key):
             last_pair.next = current_pair.next
 
 
+
+
 # '''
 # Fill this in.
 
@@ -90,7 +95,7 @@ def hash_table_retrieve(hash_table, key):
             return current_pair.value
         current_pair = current_pair.next
 
-
+    return None
 # '''
 # Fill this in
 # '''
